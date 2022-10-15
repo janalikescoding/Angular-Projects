@@ -1,0 +1,16 @@
+<h4>Update Server Name</h4>
+<!-- <input type="text" class="form-control" (input)="onTextInput($event)"/> -->
+<input type="text" class="form-control" [(ngModel)] = "serverName"/>
+<!-- <p>{{serverName}}</p> -->
+<br/>
+<h4>Now in the servers component</h4>
+<button class="btn btn-primary" [disabled]="!allowNewServer" id = "serverToggleBtn" (click)="onMouseClick()">Add Server</button>
+
+<!-- <p>{{allowNewServer}} with String interpolation</p>
+<p [innerText]="allowNewServer + ' with property binding'"></p> -->
+<!-- <p>{{serverCreationStatus}}</p> -->
+<p *ngIf="clickToggle else noServer">{{serverCreationStatus}}</p>
+<ng-template #noServer>
+    <p>{{serverCreationStatus}}</p>
+</ng-template>
+<app-server *ngFor="server of servers"></app-server>

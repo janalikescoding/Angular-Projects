@@ -1,0 +1,8 @@
+Om Namaha Shivaya
+Om Shakthi
+Om Kam Ganapathaye Namaha
+Om Muruga
+
+git config core.autocrlf false
+
+add '--global' if you want to set this configuration globally.

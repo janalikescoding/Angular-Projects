@@ -1,0 +1,7 @@
+<div class="justify-content-center">
+  <button (click)="updateClick()" class="btn btn-primary">Display Details</button>
+  <p *ngIf="oddClick">Secret Password = 'Fiesty Duck'</p>
+  <br>
+  <br>
+  <p *ngFor="let clickTimestamp of clickTimestamps; let i = index" [ngStyle]="{backgroundColor : i > 3 ? 'blue' : 'transparent'}" [ngClass]="{blueDuck : i > 3}">{{clickTimestamp}}</p>
+</div>

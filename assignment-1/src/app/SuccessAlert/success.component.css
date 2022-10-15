@@ -1,0 +1,10 @@
+#win{
+    background-color: lightgreen;
+    border-color: darkgreen;
+    color: darkblue;
+    height: 250px;
+    width: 500px;
+    text-align: center;
+    border:solid 3px;
+    line-height: 250px;
+}

@@ -1,0 +1,10 @@
+#warn{
+    background-color: lightyellow;
+    border-color: darkgoldenrod;
+    color: brown;
+    height: 250px;
+    width: 500px;
+    text-align: center;
+    border:solid 3px;
+    line-height: 250px;
+}

@@ -1,0 +1,23 @@
+Om Muruga
+
+Create new project
+ng new <project-name> --no-strict
+
+Adding Bootstrap
+npm install bootstrap@3
+
+npm install --save bootstrap@3
+
+angular.json
+"node_modules/bootstrap/dist/css/bootstrap.min.css",
+
+
+command to create component
+ng g c <component name> --spec false
+
+>= Angular 8
+ng g c cockpit --skip-tests=true
+
+or 
+
+ng g c <component name>
