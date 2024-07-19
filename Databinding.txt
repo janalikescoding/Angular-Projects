@@ -1,0 +1,23 @@
+Om Muruga
+
+String Interpolation
+
+Component.ts ---> DOM. Usage: {{url}}
+
+
+Property Binding
+
+DOM --Makes Reference to TS--> Usage: <button [diabled]="!canEnableButton"></button>
+
+To just display the property as a string on the HTML, use string interpolation. However, when a property gets updated dynamically(or if you want to change a property of  a HTML element or a directive or a component), prefer property binding.
+
+
+Event Binding
+
+DOM --> TS Usage: <button (click)="onClickButton">Click Me</button>
+
+Two Way Databinding ( Property + Event Binding. Hence combine syntax, use '[(ngModel)]')
+DOM-->TS; TS-->DOM. Usage: <input type="text" [(ngModel)]="url">
+
+
+

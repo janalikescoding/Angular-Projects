@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <ul class="nav nav-tabs">
+        <!-- <li role="presentation" class="active"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/servers">Servers</a></li>
+        <li role="presentation"><a href="/users">Users</a></li> -->
+        <li role="presentation" [ngClass]="path == '' ? 'active' : ''"><a routerLink="/" (click)="path=''">Home</a></li>
+        <li role="presentation" [ngClass]="path == 'servers' ? 'active' : ''"><a routerLink="/servers" (click)="path='servers'">Servers</a></li>
+        <li role="presentation" [ngClass]="path == 'users' ? 'active' : ''"><a [routerLink]="['/users']" (click)="path='users'">Users</a></li>
+        <!-- <li role="presentation" #homeBtn><a routerLink="/" (click)="addActiveClass(homeBtn)">Home</a></li> -->
+        <!-- <li role="presentation" #homeBtn><a routerLink="/" (click)="addActiveClass($event)">Home</a></li> -->
+        <!-- https://stackoverflow.com/questions/48700624/pass-element-ref-to-a-method-in-angular2 -->
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

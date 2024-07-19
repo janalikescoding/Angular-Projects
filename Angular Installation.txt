@@ -1,7 +1,7 @@
 Om Muruga
 
 Create new project
-ng new <project-name> --no-strict
+ng new <project-name> --no-strict (--standalone false --routing false)
 
 Adding Bootstrap
 npm install bootstrap@3
