@@ -3,35 +3,36 @@
       Calculator
     </div>
     <div class="card-body">
+      <p *ngIf="error !== ''">{{error}}<p>
       <table class="table table-bordered">
         <tbody>
           <tr>
-            <td colspan="3"><textarea name="result" id="result" class="form-control">Test</textarea></td>
-            <td  colspan="1"><button class="btn btn-primary">=</button></td>
+            <td colspan="3"><textarea name="result" id="result" class="form-control" [(ngModel)]="text"></textarea></td>
+            <td  colspan="1"><button class="btn btn-primary" (click)="calculate()">=</button></td>
           </tr>
           <tr>
-            <td><button class="btn btn-secondary">9</button></td>
-            <td><button class="btn btn-secondary">8</button></td>
-            <td><button class="btn btn-secondary">7</button></td>
-            <td><button class="btn btn-success">+</button></td>
+            <td><button class="btn btn-secondary" (click)="handleClick($event)">9</button></td>
+            <td><button class="btn btn-secondary" (click)="handleClick($event)">8</button></td>
+            <td><button class="btn btn-secondary" (click)="handleClick($event)">7</button></td>
+            <td><button class="btn btn-success" (click)="handleClick($event, true)">+</button></td>
           </tr>
           <tr>
-            <td><button class="btn btn-secondary">6</button></td>
-            <td><button class="btn btn-secondary">5</button></td>
-            <td><button class="btn btn-secondary">4</button></td>
-            <td><button class="btn btn-danger">-</button></td>
+            <td><button class="btn btn-secondary" (click)="handleClick($event)">6</button></td>
+            <td><button class="btn btn-secondary" (click)="handleClick($event)">5</button></td>
+            <td><button class="btn btn-secondary" (click)="handleClick($event)">4</button></td>
+            <td><button class="btn btn-danger" (click)="handleClick($event, true)">-</button></td>
           </tr>
           <tr>
-            <td><button class="btn btn-secondary">3</button></td>
-            <td><button class="btn btn-secondary">2</button></td>
-            <td><button class="btn btn-secondary">1</button></td>
-            <td><button class="btn btn-info">*</button></td>
+            <td><button class="btn btn-secondary" (click)="handleClick($event)">3</button></td>
+            <td><button class="btn btn-secondary" (click)="handleClick($event)">2</button></td>
+            <td><button class="btn btn-secondary" (click)="handleClick($event)">1</button></td>
+            <td><button class="btn btn-info" (click)="handleClick($event, true)">*</button></td>
           </tr>
           <tr>
-            <td><button class="btn btn-secondary">.</button></td>
-            <td><button class="btn btn-secondary">0</button></td>
-            <td><button class="btn btn-secondary">C</button></td>
-            <td><button class="btn btn-warning">%</button></td>
+            <td><button class="btn btn-secondary" (click)="handleClick($event)">.</button></td>
+            <td><button class="btn btn-secondary" (click)="handleClick($event)">0</button></td>
+            <td><button class="btn btn-secondary" (click)="clear()">C</button></td>
+            <td><button class="btn btn-warning" (click)="handleClick($event, true)">/</button></td>
           </tr>
         </tbody>
       </table>

@@ -1,14 +1,20 @@
 div.card{
     margin: 5em;
-    width: 50%;
+    width: 60%;
 }
 
 .btn{
     text-align: center;
-    width: 5rem;
+    width: 8rem;
+    height: 3rem;
     margin: 1em 2em 1em 5em;
 }
 
 .form-control{
     font-weight: bold;
+}
+
+p{
+    font-weight: bold;
+    color:red;
 }
